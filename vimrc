@@ -69,6 +69,8 @@ set noerrorbells
 " Swap file save my work many times :)
 set swapfile
 
+" Disable folding
+set nofoldenable
 
 " Custom filetype configuration
 filetype plugin indent on
