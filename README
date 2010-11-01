@@ -1,0 +1,6 @@
+# Run these commands from ${HOME} folder:
+
+cd ${HOME}
+if [ -e .vimrc ]; then mv .vimrc _.vimrc; fi
+ln -s .vim/vimrc .vimrc
+
