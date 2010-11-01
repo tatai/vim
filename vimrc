@@ -96,4 +96,9 @@ map <C-l> <C-w>l
 " http://forrst.com/posts/Use_w_to_sudo_write_a_file_with_Vim-uAN
 cmap w!! w !sudo tee % >/dev/null
 
+" Mappings for FindFile & config
+nmap , :FindFileSplit<CR>
+nmap ; :FindFileCache .<CR>
+let g:FindFileIgnore = ['*.o', '*.pyc', '*/tmp/*', 'cache_*', '*.swp'] 
+
 
