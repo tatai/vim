@@ -4,6 +4,18 @@ set nocompatible
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" UTF-8 by default
+set fileencoding=utf-8
+
+" Background will always be black
+set background=dark
+
+" Show ruler
+set ruler
+
+" Show current combination of keystrokes
+set showcmd
+
 " I like wrapping lines in vim
 set wrap
 
@@ -25,10 +37,10 @@ set copyindent
 set smarttab
 
 " Use multiple of shiftwidth when indenting with '<' and '>'
-set shiftround    
+set shiftround
 
 " Show matching parenthesis
-set showmatch     
+set showmatch
 
 " Do not show line numbers (hate them)
 set nonumber
@@ -38,8 +50,8 @@ set nonumber
 set ignorecase
 set smartcase
 
-" Highlight searchs
-set hlsearch
+" Do not highlight searchs
+set nohlsearch
 
 " Commands to be rememebered
 set history=500
@@ -61,3 +73,27 @@ set swapfile
 " Custom filetype configuration
 filetype plugin indent on
 autocmd filetype yaml set shiftwidth=2 tabstop=2 expandtab
+
+" No syntax highlighting
+syntax off
+
+" Use F2 when pasting to avoid applying indents
+set pastetoggle=<F2>
+
+" When line wrapping is enabled this make that when pressing up or down goes
+" the visual line up or down, not physical line
+" I only enable it sometimes
+"nnoremap j gj
+"nnoremap k gk
+
+" Easy change between splits
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" When you forget to sudo
+" http://forrst.com/posts/Use_w_to_sudo_write_a_file_with_Vim-uAN
+cmap w!! w !sudo tee % >/dev/null
+
+
