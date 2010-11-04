@@ -2,5 +2,8 @@
 
 cd ${HOME}
 if [ -e .vimrc ]; then mv .vimrc _.vimrc; fi
-ln -s .vim/vimrc .vimrc
+if [ -d .vim ]; then mv .vim _.vim; fi
 
+git clone git@github.com:tatai/vim.git ~/.vim
+
+ln -s .vim/vimrc .vimrc
