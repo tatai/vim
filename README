@@ -7,3 +7,7 @@ if [ -d .vim ]; then mv .vim _.vim; fi
 git clone git@github.com:tatai/vim.git ~/.vim
 
 ln -s .vim/vimrc .vimrc
+
+cd .vim
+git submodule init
+git submodule update
