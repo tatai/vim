@@ -74,6 +74,7 @@ set nofoldenable
 
 " Custom filetype configuration
 filetype plugin indent on
+autocmd filetype php set shiftwidth=4 tabstop=4 noexpandtab
 autocmd filetype yaml set shiftwidth=2 tabstop=2 expandtab
 
 " No syntax highlighting
